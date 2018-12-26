@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+		<!--指定驱动-->  
+		<classPathEntry location="E:/MyProject/meeting/WebContent/WEB-INF/lib/mysql-connector-java-8.0.13.jar"/>
+  <context id="context1">
+    <!-- 设置连接信息 -->
+    <jdbcConnection connectionURL="jdbc:mysql://127.0.0.1:3306/meet" driverClass="com.mysql.jdbc.Driver" password="root" userId="root" />
+    <javaModelGenerator targetPackage="com.abandon.domain" targetProject="meeting" />
+    <sqlMapGenerator targetPackage="com.abandon.mapper" targetProject="meeting" />
+    <javaClientGenerator targetPackage="com.abandon.test" targetProject="meeting" type="XMLMAPPER" />
+    
+    <table schema="root" tableName="user_info" domainObjectName="UserInfo"></table>
+    <table schema="root" tableName="enquipment_info" domainObjectName="EnquipmentInfo"></table>
+    <table schema="root" tableName="meetingroom_info" domainObjectName="MeetingroomInfo"></table>
+    <table schema="root" tableName="meetingroom_setting" domainObjectName="MeetingroomSetting"></table>
+    <table schema="root" tableName="meeting_userinfo" domainObjectName="MeetingUserinfo"></table>   
+  </context>
+</generatorConfiguration>

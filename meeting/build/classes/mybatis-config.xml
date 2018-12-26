@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<typeAliases>
+		<typeAlias alias="UserInfo" type="com.abandon.domain.UserInfo"/>		
+		<typeAlias alias="EnquipmentInfo"  type="com.abandon.domain.EnquipmentInfo"/>
+		<typeAlias alias="MeetingroomInfo"  type="com.abandon.domain.MeetingroomInfo"/>
+		<typeAlias alias="MeetingroomSetting"  type="com.abandon.domain.MeetingroomSetting"/>
+		<typeAlias alias="MeetingUserinfo"  type="com.abandon.domain.MeetingUserinfo"/>
+		
+	</typeAliases>
+	
+	<!-- 环境 -->
+	<environments default="developments">
+		<environment id="mysql">
+			<transactionManager type="JDBC"></transactionManager>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://127.0.0.1:3306/meet"/>
+				<property name="username" value="root" />
+				<property name="password" value="root" />
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<!-- 映射文件 -->
+	<mappers>
+		<mapper resource="com/abandon/mapper/UserInfoMapper.xml"/>
+		<mapper resource="com/abandon/mapper/EnquipmentInfoMapper.xml"/>
+		<mapper resource="com/abandon/mapper/MeetingroomInfoMapper.xml"/>
+		<mapper resource="com/abandon/mapper/MeetingroomSettingMapper.xml"/>
+		<mapper resource="com/abandon/mapper/MeetingUserinfoMapper.xml"/>
+	
+	</mappers>
+	
+	
+</configuration>
